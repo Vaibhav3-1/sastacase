@@ -39,9 +39,9 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: '@joshtriedcoding',
+      creator: '@Vaibhav',
     },
     icons,
-    metadataBase: new URL("https://sastacase.vercel.app/")
+    metadataBase: new URL("https://sastacase.vercel.app")
   }
 }

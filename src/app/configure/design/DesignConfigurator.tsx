@@ -10,9 +10,11 @@ import { RadioGroup } from '@headlessui/react'
 import { useRef, useState } from 'react'
 import {
   COLORS,
+  Camera,
   FINISHES,
   MATERIALS,
   MODELS,
+  Size,
 } from '@/validators/option-validator'
 import { Label } from '@/components/ui/label'
 import {
@@ -64,11 +66,15 @@ const DesignConfigurator = ({
   const [options, setOptions] = useState<{
     color: (typeof COLORS)[number]
     model: (typeof MODELS.options)[number]
+    sizes: (typeof Size.options)[number]
+    cameras: (typeof Camera.options)[number]
     material: (typeof MATERIALS.options)[number]
     finish: (typeof FINISHES.options)[number]
   }>({
     color: COLORS[0],
     model: MODELS.options[0],
+    sizes: Size.options[0],
+    cameras: Camera.options[0],
     material: MATERIALS.options[0],
     finish: FINISHES.options[0],
   })
@@ -305,6 +311,88 @@ const DesignConfigurator = ({
                   </DropdownMenu>
                 </div>
 
+                <div className='relative flex flex-col gap-3 w-full'>
+                  <Label>Size</Label>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button
+                        variant='outline'
+                        role='combobox'
+                        className='w-full justify-between'>
+                        {options.sizes.label}
+                        <ChevronsUpDown className='ml-2 h-4 w-4 shrink-0 opacity-50' />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      {Size.options.map((sizes) => (
+                        <DropdownMenuItem
+                          key={sizes.label}
+                          className={cn(
+                            'flex text-sm gap-1 items-center p-1.5 cursor-default hover:bg-zinc-100',
+                            {
+                              'bg-zinc-100':
+                                sizes.label === options.sizes.label,
+                            }
+                          )}
+                          onClick={() => {
+                            setOptions((prev) => ({ ...prev, sizes }))
+                          }}>
+                          <Check
+                            className={cn(
+                              'mr-2 h-4 w-4',
+                              sizes.label === options.sizes.label
+                                ? 'opacity-100'
+                                : 'opacity-0'
+                            )}
+                          />
+                          {sizes.label}
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+
+                <div className='relative flex flex-col gap-3 w-full'>
+                  <Label>Camera Type</Label>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button
+                        variant='outline'
+                        role='combobox'
+                        className='w-full justify-between'>
+                        {options.cameras.label}
+                        <ChevronsUpDown className='ml-2 h-4 w-4 shrink-0 opacity-50' />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      {Camera.options.map((cameras) => (
+                        <DropdownMenuItem
+                          key={cameras.label}
+                          className={cn(
+                            'flex text-sm gap-1 items-center p-1.5 cursor-default hover:bg-zinc-100',
+                            {
+                              'bg-zinc-100':
+                                cameras.label === options.cameras.label,
+                            }
+                          )}
+                          onClick={() => {
+                            setOptions((prev) => ({ ...prev, cameras }))
+                          }}>
+                          <Check
+                            className={cn(
+                              'mr-2 h-4 w-4',
+                              cameras.label === options.cameras.label
+                                ? 'opacity-100'
+                                : 'opacity-0'
+                            )}
+                          />
+                          {cameras.label}
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+                
                 {[MATERIALS, FINISHES].map(
                   ({ name, options: selectableOptions }) => (
                     <RadioGroup

@@ -14,32 +14,80 @@ export const COLORS = [
   { label: 'Rose', value: 'rose', tw: 'rose-950' },
 ] as const
 
+export const Size = {
+  name: 'sizes',
+  options: [
+    {
+      label: '6.1 in',
+      value: '6.1 in',
+    },
+    {
+      label: '6.3 in',
+      value: '6.3 in',
+    },
+    {
+      label: '6.5 in',
+      value: '6.5 in',
+    },
+    {
+      label: '6.7 in',
+      value: '6.7 in',
+    },
+    {
+      label: '6.9 in',
+      value: '6.9 in',
+    },
+  ],
+}as const 
+
+export const Camera = {
+  name: 'camera sizes',
+  options: [
+    {
+      label: 'Round Central',
+      value: 'iphone11',
+    },
+    {
+      label: 'Round Left',
+      value: 'iphone12',
+    },
+    {
+      label: 'Rectangular left ',
+      value: 'iphone13',
+    },
+    {
+      label: 'Square Left',
+      value: 'iphone14',
+    },
+    {
+      label: 'Left Straight',
+      value: 'iphone15',
+    },
+  ],
+}as const 
+
 export const MODELS = {
   name: 'models',
   options: [
     {
-      label: 'iPhone X',
-      value: 'iphonex',
+      label: 'iPhone',
+      value: 'iphone',
     },
     {
-      label: 'iPhone 11',
-      value: 'iphone11',
+      label: 'Samsung',
+      value: 'Samsung',
     },
     {
-      label: 'iPhone 12',
-      value: 'iphone12',
+      label: 'Vivo',
+      value: 'vivo',
     },
     {
-      label: 'iPhone 13',
-      value: 'iphone13',
+      label: 'Oppo',
+      value: 'Oppo',
     },
     {
-      label: 'iPhone 14',
-      value: 'iphone14',
-    },
-    {
-      label: 'iPhone 15',
-      value: 'iphone15',
+      label: 'Any Other',
+      value: 'Other',
     },
   ],
 } as const
@@ -48,15 +96,15 @@ export const MATERIALS = {
   name: 'material',
   options: [
     {
-      label: 'Silicone',
+      label: 'Dashing Silicone',
       value: 'silicone',
       description: undefined,
       price: PRODUCT_PRICES.material.silicone,
     },
     {
-      label: 'Soft Polycarbonate',
+      label: 'Soft-touch Polycarbonate',
       value: 'polycarbonate',
-      description: 'Scratch-resistant coating',
+      description: 'Scratch-resistant, Soft Beautiful touch',
       price: PRODUCT_PRICES.material.polycarbonate,
     },
   ],

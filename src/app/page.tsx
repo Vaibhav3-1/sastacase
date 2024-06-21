@@ -14,7 +14,6 @@ export default function Home() {
           <div className='col-span-2 px-6 lg:px-0 lg:pt-4'>
             <div className='relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start'>
               <div className='absolute w-28 left-0 -top-20 hidden lg:block'>
-                {/* i forgot this div right here in the video, it's purely visual gradient and looks nice */}
                 <div className='absolute inset-x-0 bottom-0 bg-gradient-to-t via-slate-50/50 from-slate-50 h-28' />
                 <img src='/snake-1.png' className='w-full' />
               </div>
@@ -26,7 +25,7 @@ export default function Home() {
               <p className='mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap'>
                 Capture your favorite memories with your own,{' '}
                 <span className='font-semibold'>one-of-one</span> phone case.
-                CaseCobra allows you to protect your memories, not just your
+                Sastacase allows you to protect your memories, not just your
                 phone case.
               </p>
 

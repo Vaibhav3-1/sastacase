@@ -14,6 +14,7 @@ export default function Home() {
           <div className='col-span-2 px-6 lg:px-0 lg:pt-4'>
             <div className='relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start'>
               <div className='absolute w-28 left-0 -top-20 hidden lg:block'>
+                {/* i forgot this div right here in the video, it's purely visual gradient and looks nice */}
                 <div className='absolute inset-x-0 bottom-0 bg-gradient-to-t via-slate-50/50 from-slate-50 h-28' />
                 <img src='/snake-1.png' className='w-full' />
               </div>
@@ -25,7 +26,7 @@ export default function Home() {
               <p className='mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap'>
                 Capture your favorite memories with your own,{' '}
                 <span className='font-semibold'>one-of-one</span> phone case.
-                Sastacase allows you to protect your memories, not just your
+                CaseCobra allows you to protect your memories, not just your
                 phone case.
               </p>
 
@@ -85,7 +86,7 @@ export default function Home() {
                   </div>
 
                   <p>
-                    <span className='font-semibold'>2532 and counting</span> happy customers
+                    <span className='font-semibold'>1.250</span> happy customers
                   </p>
                 </div>
               </div>
@@ -134,23 +135,16 @@ export default function Home() {
               </div>
               <div className='text-lg leading-8'>
                 <p>
-                  "The case feels durable and I even got a compliment on the
-                  design. Had the case for two and a half months now and{' '}
+                  "The case has been fantastic! It’s sturdy, and I've received multiple compliments on its sleek design. I've had it for three months now, and {' '}
                   <span className='p-0.5 bg-slate-800 text-white'>
-                    the image is super clear
+                  the image quality is still sharp and vibrant
                   </span>
-                  , on the case I had before, the image started fading into
-                  yellow-ish color after a couple weeks. Love it."
+                  , unlike my previous case which started to look dull after just a month. Highly recommend it!"
                 </p>
               </div>
               <div className='flex gap-4 mt-2'>
-                <img
-                  className='rounded-full h-12 w-12 object-cover'
-                  src='/users/user-1.png'
-                  alt='user'
-                />
                 <div className='flex flex-col'>
-                  <p className='font-semibold'>Jonathan</p>
+                  <p className='font-semibold'>Joginder Singh</p>
                   <div className='flex gap-1.5 items-center text-zinc-600'>
                     <Check className='h-4 w-4 stroke-[3px] text-pink-600' />
                     <p className='text-sm'>Verified Purchase</p>
@@ -170,24 +164,17 @@ export default function Home() {
               </div>
               <div className='text-lg leading-8'>
                 <p>
-                  "I usually keep my phone together with my keys in my pocket
-                  and that led to some pretty heavy scratchmarks on all of my
-                  last phone cases. This one, besides a barely noticeable
-                  scratch on the corner,{' '}
+                  "This case has exceeded my expectations. I often toss my phone in my bag with other items, and my previous cases would get scratched up quickly. However, this one has held up remarkably well, {' '}
                   <span className='p-0.5 bg-slate-800 text-white'>
                     looks brand new after about half a year
                   </span>
-                  . I dig it."
+                  . Very impressed!"
                 </p>
               </div>
               <div className='flex gap-4 mt-2'>
-                <img
-                  className='rounded-full h-12 w-12 object-cover'
-                  src='/users/user-4.jpg'
-                  alt='user'
-                />
+                
                 <div className='flex flex-col'>
-                  <p className='font-semibold'>Josh</p>
+                  <p className='font-semibold'>Armanda</p>
                   <div className='flex gap-1.5 items-center text-zinc-600'>
                     <Check className='h-4 w-4 stroke-[3px] text-pink-600' />
                     <p className='text-sm'>Verified Purchase</p>
@@ -197,11 +184,27 @@ export default function Home() {
             </div>
           </div>
         </MaxWidthWrapper>
+        
+
+        
 
         <div className='pt-16'>
           <Reviews />
         </div>
       </section>
+
+      <MaxWidthWrapper className='py-24'>
+      <div className='flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20'>
+              <div className='text-lg leading-8'>
+              <span className='relative px-2 bg-pink-600 text-white'>
+                  About Me  
+                </span>{' '}
+                <p>
+                Hello! My name is Vaibhav Kr Singh, and I am the creator of Sasta Case. With a passion for innovative design and quality, I embarked on a mission to create durable and stylish phone cases that don't break the bank. At Sasta Case, we believe that everyone should have access to affordable yet premium phone protection without compromising on aesthetics.
+                </p>
+            </div>
+          </div>
+          </MaxWidthWrapper>
 
       <section>
         <MaxWidthWrapper className='py-24'>
